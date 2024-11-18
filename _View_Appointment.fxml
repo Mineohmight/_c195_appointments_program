@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" maxWidth="1110.0" minWidth="1110.0" nodeOrientation="LEFT_TO_RIGHT" prefWidth="1110.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller._Appointment_View">
+
+    <VBox alignment="TOP_CENTER" prefHeight="815.0" prefWidth="1108.0" style="-fx-background-color: linear-gradient(to bottom, #a88a0f, #663d00);">
+        <!-- Padding for the VBox -->
+        <padding>
+            <Insets bottom="30.1" left="19.9" right="20.1" top="20.1" />
+        </padding>
+        
+        <!-- Title Label -->
+        <Label contentDisplay="CENTER" prefHeight="190.0" prefWidth="540.0" style="-fx-background-color: linear-gradient(to right, #706503, #610600); -fx-text-fill: #39ff14;" text="                   Appointments" textAlignment="CENTER">
+            <font>
+                <Font name="Times New Roman" size="36.1" />
+            </font>
+        </Label>
+        
+        <!-- Toolbar Section -->
+        <ToolBar style="-fx-background-color: linear-gradient(to bottom, #596134, #663d00);">
+            <HBox spacing="20.1">
+                <RadioButton mnemonicParsing="false" prefHeight="17.0" prefWidth="348.0" selected="true" style="-fx-background-color: linear-gradient(to bottom, #706503, #a88a0f); -fx-text-fill: #39ff14;" text="Appointments">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="_ToggleGroup" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton mnemonicParsing="false" style="-fx-background-color: linear-gradient(to bottom, #663d00, #706503); -fx-text-fill: #39ff14;" text="Customers" toggleGroup="$_ToggleGroup" />
+                <RadioButton mnemonicParsing="false" style="-fx-background-color: linear-gradient(to bottom, #610600, #596134); -fx-text-fill: #39ff14;" text="Reports" toggleGroup="$_ToggleGroup" />
+            </HBox>
+        </ToolBar>
+        
+        <!-- Main Content -->
+        <GridPane hgap="15.1" prefHeight="442.0" prefWidth="1058.0" style="-fx-background-color: linear-gradient(to bottom, #a88a0f, #610600);">
+            
+            <!-- Constraints -->
+            <columnConstraints>
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="192.9" minWidth="0.0" prefWidth="0.0" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="1053.0" minWidth="10.1" prefWidth="1053.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints maxHeight="45.0" minHeight="40.1" prefHeight="45.0" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="400.1" minHeight="250.1" prefHeight="396.0" vgrow="ALWAYS" />
+            </rowConstraints>
+            
+            <!-- Left Section -->
+            <GridPane prefHeight="402.0" prefWidth="178.0" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.1" />
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.1" vgrow="ALWAYS" />
+                    <RowConstraints minHeight="10.1" vgrow="ALWAYS" />
+                </rowConstraints>
+            </GridPane>
+            
+            <!-- TabPane Section -->
+            <TabPane prefHeight="40.1" style="-fx-background-color: linear-gradient(to bottom, #610600, #596134);" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <Tab fx:id="_Tab1" onSelectionChanged="#_change_tab" style="-fx-text-fill: #39ff14;" text="All Appointments" />
+                <Tab fx:id="_Tab2" onSelectionChanged="#_change_tab" style="-fx-text-fill: #39ff14;" text="Monthly" />
+                <Tab fx:id="_Tab3" onSelectionChanged="#_change_tab" style="-fx-text-fill: #39ff14;" text="Weekly" />
+            </TabPane>
+            
+            <!-- TableView Section -->
+            <TableView fx:id="_TableView_Appointments" maxWidth="1.8E308" prefHeight="400.0" prefWidth="1029.0" style="-fx-background-color: linear-gradient(to bottom, #706503, #610600);" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        </GridPane>
+          
+                <!-- Bottom Section -->
+          <VBox alignment="TOP_CENTER" spacing="6.1" style="-fx-background-color: linear-gradient(to bottom, #610600, #a88a0f);">
+              <Separator prefWidth="200.1" />
+
+             <!-- Buttons Section -->
+             <VBox spacing="6.1" style="-fx-background-color: linear-gradient(to right, #596134, #706503);">
+                 <Button maxWidth="1.8E308" mnemonicParsing="false" onAction="#_modify_appointment_button" style="-fx-background-color: linear-gradient(to bottom, #610600, #596134); -fx-text-fill: #39ff14;" text="Modify Appointment." />
+                 <Button maxWidth="1.8E308" mnemonicParsing="false" onAction="#_delete_appointment_button" style="-fx-background-color: linear-gradient(to bottom, #706503, #663d00); -fx-text-fill: #39ff14;" text="Delete Appointment." />
+                 <Button maxWidth="1.8E308" mnemonicParsing="false" onAction="#_add_appointment_button" style="-fx-background-color: linear-gradient(to bottom, #663d00, #a88a0f); -fx-text-fill: #39ff14;" text="Add Appointment." />
+             </VBox>
+              <Label fx:id="_Label2" style="-fx-text-fill: #39ff14;" text="_Label2" textAlignment="RIGHT" />
+              <Button maxWidth="1.8E308" mnemonicParsing="false" onAction="#_logout_button" style="-fx-background-color: linear-gradient(to bottom, #596134, #706503); -fx-text-fill: #39ff14;" text="Logout" textAlignment="LEFT" />
+              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#_exit_button_action" style="-fx-background-color: linear-gradient(to bottom, #a88a0f, #663d00); -fx-text-fill: #39ff14;" text="Exit" textAlignment="RIGHT" />
+          </VBox>
+           <Label fx:id="_Label1" alignment="CENTER" maxWidth="1.8E308" minHeight="75.1" prefHeight="75.1" style="-fx-background-color: linear-gradient(to bottom, #a88a0f, #663d00); -fx-text-fill: #39ff14;" text=" " wrapText="true">
+               <font>
+                   <Font name="Times New Roman" size="12.1" />
+               </font>
+           </Label>
+    </VBox>
+</ScrollPane>

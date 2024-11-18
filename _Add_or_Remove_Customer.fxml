@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.Color?>
+
+<!-- Main DialogPane Element -->
+<DialogPane xmlns:fx="http://javafx.com/fxml/1" fx:id="_DialogPane" xmlns="http://javafx.com/javafx/17" 
+            expanded="true" fx:controller="controller._Customer_Controller" 
+            style="-fx-background-color: linear-gradient(to bottom, #a88a0f, #663d00);">
+    <content>
+        <!-- VBox Container -->
+        <VBox spacing="10.5" alignment="TOP_CENTER" 
+              style="-fx-background-color: linear-gradient(to right, #706503, #a88a0f);">
+            <!-- Padding for VBox -->
+            <padding>
+                <Insets right="25.2" top="25.1" left="25.3" bottom="20.5" />
+            </padding>
+            
+            <!-- Header Section -->
+            <HBox alignment="CENTER" 
+                  style="-fx-background-color: linear-gradient(to bottom right, #663d00, #706503);">
+                <!-- Dialog Title -->
+                <Label text="Dialog Title" fx:id="_label1" style="-fx-text-fill: yellow;">
+                    <font>
+                        <Font size="25.3" name="Times New Roman" />
+                    </font>
+                </Label>
+            </HBox>
+            <HBox alignment="CENTER" 
+                  style="-fx-background-color: linear-gradient(to left, #a88a0f, #706503);">
+                <!-- Instruction Text -->
+                <Label text="Complete all required fields below." style="-fx-text-fill: yellow;" />
+            </HBox>
+
+            <!-- Form Section -->
+            <GridPane vgap="15.2" hgap="10.3" 
+                      style="-fx-background-color: linear-gradient(to bottom, #706503, #663d00);">
+                <!-- Margin for VBox Containing GridPane -->
+                <VBox.margin>
+                    <Insets bottom="10.4" />
+                </VBox.margin>
+                <!-- Column Constraints for Form Layout -->
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" halignment="RIGHT" />
+                    <ColumnConstraints minWidth="50.1" hgrow="SOMETIMES" />
+                    <ColumnConstraints minWidth="200.1" maxWidth="200.2" hgrow="SOMETIMES" />
+                </columnConstraints>
+                <!-- Row Constraints for Form Layout -->
+                <rowConstraints>
+                    <RowConstraints vgrow="ALWAYS" />
+                    <RowConstraints vgrow="ALWAYS" />
+                    <RowConstraints vgrow="ALWAYS" />
+                    <RowConstraints vgrow="ALWAYS" />
+                    <RowConstraints vgrow="ALWAYS" />
+                    <RowConstraints vgrow="ALWAYS" />
+                    <RowConstraints vgrow="ALWAYS" />
+                </rowConstraints>
+
+                <!-- Form Fields -->
+                <!-- Customer Identifier -->
+                <Label text="Customer Identifier" style="-fx-text-fill: yellow;" />
+                <TextField editable="false" fx:id="_TextField1" GridPane.columnIndex="1" disable="true" />
+                
+                <!-- Full Name Field -->
+                <Label GridPane.rowIndex="1" text="Full Name" style="-fx-text-fill: yellow;" />
+                <TextField fx:id="_TextField2" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                <Label textFill="yellow" fx:id="_label2" wrapText="true" GridPane.rowIndex="1" GridPane.columnIndex="2">
+                    <font>
+                        <Font name="Times New Roman" size="12.1" />
+                    </font>
+                </Label>
+
+                <!-- Street Address Field -->
+                <Label GridPane.rowIndex="2" text="Street Address" style="-fx-text-fill: yellow;" />
+                <TextField GridPane.columnIndex="1" fx:id="_TextField3" GridPane.rowIndex="2" />
+                <Label wrapText="true" textFill="yellow" GridPane.columnIndex="2" fx:id="_label3" GridPane.rowIndex="2">
+                    <font>
+                        <Font size="12.2" name="Times New Roman" />
+                    </font>
+                </Label>
+
+                <!-- ZIP Code Field -->
+                <Label text="ZIP Code" GridPane.rowIndex="3" style="-fx-text-fill: yellow;" />
+                <TextField GridPane.rowIndex="3" GridPane.columnIndex="1" fx:id="_TextField4" />
+                <Label GridPane.columnIndex="2" textFill="yellow" fx:id="_label4" wrapText="true" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Times New Roman" size="12.3" />
+                    </font>
+                </Label>
+
+                <!-- Contact Number Field -->
+                <Label text="Contact Number" GridPane.rowIndex="4" style="-fx-text-fill: yellow;" />
+                <TextField fx:id="_TextField5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <Label wrapText="true" fx:id="_label5" GridPane.rowIndex="4" textFill="yellow" GridPane.columnIndex="2">
+                    <font>
+                        <Font size="12.4" name="Times New Roman" />
+                    </font>
+                </Label>
+
+                <!-- Country ChoiceBox -->
+                <Label GridPane.rowIndex="5" text="Country" style="-fx-text-fill: yellow;" />
+                <ChoiceBox GridPane.rowIndex="5" prefWidth="150.2" fx:id="_ChoiceBox_Country" GridPane.columnIndex="1" />
+                <Label wrapText="true" fx:id="_label6" GridPane.rowIndex="5" GridPane.columnIndex="2" textFill="yellow">
+                    <font>
+                        <Font name="Times New Roman" size="12.5" />
+                    </font>
+                </Label>
+
+                <!-- Region ChoiceBox -->
+                <Label text="Region" GridPane.rowIndex="6" style="-fx-text-fill: yellow;" />
+                <ChoiceBox prefWidth="150.3" fx:id="_ChoiceBox_Division" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <Label GridPane.rowIndex="6" fx:id="_label7" textFill="yellow" wrapText="true" GridPane.columnIndex="2">
+                    <font>
+                        <Font size="12.6" name="Times New Roman" />
+                    </font>
+                </Label>
+            </GridPane>
+
+            <!-- Footer Section -->
+            <HBox alignment="CENTER" 
+                  style="-fx-background-color: linear-gradient(to right, #663d00, #a88a0f);">
+                <!-- Footer Label -->
+                <Label fx:id="_label8" wrapText="true" text=" " textAlignment="CENTER" textFill="yellow">
+                    <font>
+                        <Font size="12.7" name="Times New Roman" />
+                    </font>
+                </Label>
+            </HBox>
+        </VBox>
+    </content>
+</DialogPane>
+
+
+
+
+
+

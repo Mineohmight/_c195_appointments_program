@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane fitToHeight="true" fitToWidth="true" maxWidth="1110.1" minWidth="1110.3" nodeOrientation="LEFT_TO_RIGHT" prefWidth="1110.2" style="-fx-background-color: linear-gradient(to bottom, #a88a0f, #663d00, #706503);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller._Report_Controller">
+
+    <!-- Main container for all elements -->
+    <VBox alignment="TOP_CENTER" maxWidth="2.0102E299" prefHeight="786.0" prefWidth="1109.0" style="-fx-background-color: linear-gradient(to right, #706503, #610600, #596134);">
+        <padding>
+            <!-- Padding for the VBox -->
+            <Insets bottom="30.1" left="20.1" right="20.2" top="20.3" />
+        </padding>
+
+        <!-- Title Section -->
+        <Label style="-fx-background-color: linear-gradient(to left, #a88a0f, #596134, #663d00); -fx-font-family: 'Comic Sans MS'; -fx-text-fill: #FFFF00;" text="Reports">
+            <font>
+                <!-- Font for the title -->
+                <Font name="Comic Sans MS" size="36.2" />
+            </font>
+        </Label>
+
+        <!-- Toolbar Section -->
+        <ToolBar style="-fx-background-color: linear-gradient(to top, #610600, #706503, #a88a0f);">
+            <HBox spacing="20.1" style="-fx-background-color: linear-gradient(to right, #663d00, #596134, #706503);">
+                <!-- Radio button for "Appointments" -->
+                <RadioButton mnemonicParsing="false" selected="true" style="-fx-background-color: yellow; -fx-font-family: 'Comic Sans MS'; -fx-text-fill: red;" text="Appointments" textAlignment="CENTER" toggleGroup="$_ToggleGroup1">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="_ToggleGroup1" />
+                    </toggleGroup>
+                </RadioButton>
+                <!-- Radio button for "Customers" -->
+                <RadioButton mnemonicParsing="false" style="-fx-background-color: yellow; -fx-font-family: 'Comic Sans MS'; -fx-text-fill: red;" text="Customers" toggleGroup="$_ToggleGroup1" />
+                <!-- Radio button for "Reports" -->
+                <RadioButton mnemonicParsing="false" prefHeight="18.0" prefWidth="355.0" selected="true" style="-fx-background-color: yellow; -fx-font-family: 'Comic Sans MS'; -fx-text-fill: red;" text="Reports" toggleGroup="$_ToggleGroup1" />
+            </HBox>
+        </ToolBar>
+
+                   <!-- Vertical Box for Labels and ChoiceBox -->
+          <VBox alignment="TOP_CENTER" prefHeight="0.0" prefWidth="1069.0" spacing="6.1" style="-fx-background-color: linear-gradient(to bottom, #663d00, #610600, #a88a0f);">
+              <!-- Label for information -->
+              <Label fx:id="_Label1" style="-fx-background-color: linear-gradient(to right, #706503, #596134, #a88a0f); -fx-font-family: 'Comic Sans MS'; -fx-text-fill: #FFFF00;" wrapText="true">
+                  <font>
+                      <Font name="Comic Sans MS" size="12.1" />
+                  </font>
+              </Label>
+              <!-- Label with centered text -->
+              <Label fx:id="_Label2" alignment="CENTER" contentDisplay="CENTER" style="-fx-background-color: linear-gradient(to left, #596134, #610600, #706503); -fx-font-family: 'Comic Sans MS'; -fx-text-fill: #FFFF00;" textAlignment="CENTER" wrapText="true">
+                  <font>
+                      <Font name="Comic Sans MS" size="12.3" />
+                  </font>
+                  <padding>
+                      <!-- Padding for the label -->
+                      <Insets top="10.2" />
+                  </padding>
+              </Label>
+          </VBox>
+           <!-- Disabled ChoiceBox -->
+           <ChoiceBox fx:id="_ChoiceBox" disable="true" prefWidth="150.3" style="-fx-background-color: yellow; -fx-font-family: 'Comic Sans MS'; -fx-text-fill: green;" />
+           <!-- Label for footer -->
+           <Label fx:id="_Label3" alignment="CENTER" contentDisplay="RIGHT" style="-fx-background-color: linear-gradient(to top, #706503, #610600, #596134); -fx-font-family: 'Comic Sans MS'; -fx-text-fill: #FFFF00;" text="_Label3" textAlignment="CENTER">
+               <padding>
+                   <!-- Padding for the label -->
+                   <Insets bottom="10.3" />
+               </padding>
+           </Label>
+      <GridPane prefHeight="7.0" prefWidth="1069.0" style="-fx-background-color: linear-gradient(to top, #706503, #663d00, #596134);">
+         <columnConstraints>
+            <ColumnConstraints hgrow="ALWAYS" minWidth="10.2" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.3" vgrow="ALWAYS" />
+            <RowConstraints minHeight="10.2" vgrow="ALWAYS" />
+         </rowConstraints>
+      </GridPane>
+
+        <!-- Main Grid Layout -->
+        <GridPane hgap="15.1" style="-fx-background-color: linear-gradient(to bottom, #706503, #663d00, #a88a0f);">
+            <columnConstraints>
+                <!-- Column constraints for the grid -->
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="150.1" minWidth="0.0" prefWidth="0.0" />
+                <ColumnConstraints hgrow="ALWAYS" maxWidth="1054.0" minWidth="10.1" prefWidth="1054.0" />
+            </columnConstraints>
+
+            <rowConstraints>
+                <!-- Row constraints for the grid -->
+                <RowConstraints maxHeight="40.2" minHeight="40.1" prefHeight="40.3" vgrow="ALWAYS" />
+                <RowConstraints maxHeight="400.1" minHeight="250.2" prefHeight="400.3" vgrow="ALWAYS" />
+            </rowConstraints>
+
+            <!-- Tab Pane Section -->
+            <TabPane prefHeight="40.3" style="-fx-background-color: linear-gradient(to top, #663d00, #706503, #596134);" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <!-- Tabs for navigation -->
+                <Tab fx:id="_Tab1" onSelectionChanged="#_change_tab" text="Appointments By User" />
+                <Tab fx:id="_Tab3" onSelectionChanged="#_change_tab" text="Contacts Report" />
+                <Tab fx:id="_Tab2" onSelectionChanged="#_change_tab" text="Month Type Report" />
+            </TabPane>
+
+            <!-- Anchor Pane Section -->
+            <AnchorPane fx:id="_AnchorPane" minHeight="395.0" minWidth="891.0" prefHeight="401.0" prefWidth="928.0" style="-fx-background-color: linear-gradient(to right, #a88a0f, #610600, #596134);" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        </GridPane>
+
+          <!-- Bottom Pane Section -->
+          <VBox alignment="BOTTOM_CENTER" spacing="6.2" style="-fx-background-color: linear-gradient(to right, #663d00, #a88a0f, #706503);" />
+
+         <!-- Left Pane Section -->
+         <GridPane prefHeight="7.0" prefWidth="1069.0" style="-fx-background-color: linear-gradient(to top, #706503, #663d00, #596134);">
+             <columnConstraints>
+                 <!-- Column constraints for the left pane -->
+                 <ColumnConstraints hgrow="ALWAYS" minWidth="10.2" />
+             </columnConstraints>
+             <rowConstraints>
+                 <!-- Row constraints for the left pane -->
+                 <RowConstraints minHeight="10.3" vgrow="ALWAYS" />
+                 <RowConstraints minHeight="10.2" vgrow="ALWAYS" />
+             </rowConstraints>
+         </GridPane>
+           <!-- Logout Button -->
+           <Button maxWidth="2.0103E299" mnemonicParsing="false" onAction="#_logout_button" style="-fx-background-color: linear-gradient(to left, #610600, #596134, #663d00); -fx-font-family: 'Comic Sans MS'; -fx-text-fill: #FFFF00;" text="Logout" textAlignment="CENTER" />
+           <!-- Exit Button -->
+           <Button maxWidth="2.0102E299" mnemonicParsing="false" onAction="#_exit_button" style="-fx-background-color: linear-gradient(to bottom, #706503, #a88a0f, #610600); -fx-font-family: 'Comic Sans MS'; -fx-text-fill: #FFFF00;" text="Quit!" textAlignment="CENTER" />
+    </VBox>
+</ScrollPane>

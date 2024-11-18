@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.paint.Color?>
+
+<DialogPane expanded="true" fx:id="_DialogPane" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller._Appointment_Controller" style="-fx-background-color: linear-gradient(to bottom, #a88a0f, #663d00);">
+    <content>
+        <!-- Main BorderPane for Layout -->
+        <BorderPane style="-fx-background-color: linear-gradient(to right, #706503, #2a4001);">
+            <!-- Top Section for Title -->
+            <top>
+                <VBox alignment="CENTER" style="-fx-background-color: linear-gradient(to bottom left, #663d00, #a88a0f);">
+                    <Label text="Kindly complete the necessary details." style="-fx-text-fill: yellow;">
+                        <font>
+                            <Font size="12.0" name="Times New Roman" />
+                        </font>
+                    </Label>
+                    <Label text="Main Header" fx:id="_Label" style="-fx-text-fill: yellow;">
+                        <font>
+                            <Font size="25.1" name="Times New Roman" />
+                        </font>
+                    </Label>
+                </VBox>
+            </top>
+
+            <!-- Center Section for Main Form -->
+            <center>
+                <VBox spacing="15.1" style="-fx-background-color: linear-gradient(to top right, #706503, #2a4001);">
+                    <GridPane vgap="15.2" hgap="10.1" style="-fx-background-color: linear-gradient(to left, #663d00, #706503);">
+                        <!-- Form Fields -->
+                        <columnConstraints>
+                            <ColumnConstraints minWidth="50.1" hgrow="SOMETIMES" />
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+                            <ColumnConstraints minWidth="200.2" maxWidth="200.1" hgrow="SOMETIMES" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="ALWAYS" />
+                            <RowConstraints vgrow="ALWAYS" />
+                            <RowConstraints vgrow="ALWAYS" />
+                            <RowConstraints vgrow="ALWAYS" />
+                            <RowConstraints vgrow="ALWAYS" />
+                            <RowConstraints vgrow="ALWAYS" />
+                            <RowConstraints vgrow="ALWAYS" />
+                            <RowConstraints vgrow="ALWAYS" />
+                        </rowConstraints>
+
+                        <!-- Labels and Inputs -->
+                        <Label text="Appointment ID" style="-fx-text-fill: yellow;">
+                            <font>
+                                <Font size="12.0" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <TextField disable="true" editable="false" GridPane.columnIndex="1" fx:id="_TextField1" />
+                        <Label GridPane.rowIndex="1" text="Title" style="-fx-text-fill: yellow;">
+                            <font>
+                                <Font size="12.0" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="_TextField2" />
+                        <Label fx:id="_Label1" GridPane.rowIndex="1" GridPane.columnIndex="2" wrapText="true" textFill="yellow">
+                            <font>
+                                <Font size="12.1" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <Label text="Details" GridPane.rowIndex="2" style="-fx-text-fill: yellow;">
+                            <font>
+                                <Font size="12.0" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="_TextField3" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+                        <Label fx:id="_Label2" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="2" textFill="yellow">
+                            <font>
+                                <Font size="12.2" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="_TextField4" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+                        <Label text="Address" GridPane.rowIndex="3" style="-fx-text-fill: yellow;">
+                            <font>
+                                <Font size="12.0" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <Label fx:id="_Label3" GridPane.columnIndex="2" GridPane.rowIndex="3" wrapText="true" textFill="yellow">
+                            <font>
+                                <Font size="12.3" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <Label text="Type" GridPane.rowIndex="4" style="-fx-text-fill: yellow;">
+                            <font>
+                                <Font size="12.0" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="_TextField5" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+                        <Label fx:id="_Label4" wrapText="true" GridPane.rowIndex="4" GridPane.columnIndex="2" textFill="yellow">
+                            <font>
+                                <Font size="12.4" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <ChoiceBox GridPane.columnIndex="1" GridPane.rowIndex="5" fx:id="_ChoiceBox_Contact" prefWidth="150.1" />
+                        <Label fx:id="_Label5" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="5" textFill="yellow">
+                            <font>
+                                <Font size="12.5" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <Label text="Contact" GridPane.rowIndex="5" style="-fx-text-fill: yellow;">
+                            <font>
+                                <Font size="12.0" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <ChoiceBox GridPane.rowIndex="6" GridPane.columnIndex="1" fx:id="_ChoiceBox_Customer" prefWidth="150.2" />
+                        <Label fx:id="_Label6" textFill="yellow" wrapText="true" GridPane.rowIndex="6" GridPane.columnIndex="2">
+                            <font>
+                                <Font size="12.6" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <Label text="Customer ID" GridPane.rowIndex="6" style="-fx-text-fill: yellow;">
+                            <font>
+                                <Font size="12.0" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <Label GridPane.rowIndex="7" text="User ID" style="-fx-text-fill: yellow;">
+                            <font>
+                                <Font size="12.0" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <ChoiceBox GridPane.rowIndex="7" GridPane.columnIndex="1" fx:id="_ChoiceBox_User" prefWidth="150.3" />
+                        <Label fx:id="_Label7" wrapText="true" GridPane.rowIndex="7" GridPane.columnIndex="2" textFill="yellow">
+                            <font>
+                                <Font size="12.7" name="Times New Roman" />
+                            </font>
+                        </Label>
+                    </GridPane>
+
+                    <!-- Date and Time Section -->
+                    <GridPane vgap="10.3" hgap="10.2" style="-fx-background-color: linear-gradient(to bottom, #2a4001, #a88a0f);">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.1" />
+                            <ColumnConstraints hgrow="SOMETIMES" prefWidth="100.2" halignment="RIGHT" />
+                            <ColumnConstraints prefWidth="100.3" hgrow="SOMETIMES" />
+                            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints prefHeight="30.1" minHeight="10.1" vgrow="ALWAYS" />
+                            <RowConstraints vgrow="SOMETIMES" prefHeight="30.2" minHeight="10.2" />
+                        </rowConstraints>
+
+                        <!-- DatePicker and Spinner Inputs -->
+                        <Label text="Start Point" style="-fx-text-fill: yellow;">
+                            <font>
+                                <Font size="12.0" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <DatePicker fx:id="_DatePicker1" GridPane.columnIndex="1" />
+                        <HBox GridPane.columnIndex="3" style="-fx-background-color: linear-gradient(to right, #706503, #663d00);">
+                            <Spinner fx:id="_Spinner1" />
+                            <Spinner fx:id="_Spinner2" />
+                        </HBox>
+                        <Label text="End Point" GridPane.rowIndex="1" style="-fx-text-fill: yellow;">
+                            <font>
+                                <Font size="12.0" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <DatePicker fx:id="_DatePicker2" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+                        <Label text="Beginning Time" GridPane.columnIndex="2" style="-fx-text-fill: yellow;">
+                            <font>
+                                <Font size="12.0" name="Times New Roman" />
+                            </font>
+                        </Label>
+                        <HBox GridPane.rowIndex="1" GridPane.columnIndex="3" style="-fx-background-color: linear-gradient(to left, #a88a0f, #2a4001);">
+                            <Spinner fx:id="_Spinner3" />
+                            <Spinner fx:id="_Spinner4" />
+                        </HBox>
+                        <Label GridPane.columnIndex="2" GridPane.rowIndex="1" text="Finishing Time" style="-fx-text-fill: yellow;">
+                            <font>
+                                <Font size="12.0" name="Times New Roman" />
+                            </font>
+                        </Label>
+                    </GridPane>
+                </VBox>
+            </center>
+
+            <!-- Bottom Section for Messages -->
+            <bottom>
+                <VBox alignment="CENTER" style="-fx-background-color: linear-gradient(to top, #706503, #2a4001);">
+                    <Label fx:id="_Label9" wrapText="true" textFill="yellow" text=" " textAlignment="CENTER">
+                        <font>
+                            <Font size="12.8" name="Times New Roman" />
+                        </font>
+                    </Label>
+                    <Label fx:id="_Label8" wrapText="true" text=" " textFill="yellow" textAlignment="CENTER">
+                        <font>
+                            <Font size="12.9" name="Times New Roman" />
+                        </font>
+                    </Label>
+                </VBox>
+            </bottom>
+        </BorderPane>
+    </content>
+</DialogPane>
+
