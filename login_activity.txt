@@ -1,0 +1,14 @@
+
+User test logged in at time 11-18-2024 04:07:47
+User teen_titans_go_68 could not log in at time 11-18-2024 04:08:20
+User teen_titans_go_70 could not log in at time 11-18-2024 04:08:27
+User go_49ers could not log in at time 11-18-2024 04:08:41
+User james could not log in at time 11-18-2024 04:08:58
+User test could not log in at time 11-18-2024 04:09:02
+User test could not log in at time 11-18-2024 04:09:05
+User aaaaaaaaaaaaaaaa could not log in at time 11-18-2024 04:09:08
+User ---------- could not log in at time 11-18-2024 04:09:17
+User ---------- could not log in at time 11-18-2024 04:09:17
+User test could not log in at time 11-18-2024 04:09:24
+User admin could not log in at time 11-18-2024 04:09:29
+User admin logged in at time 11-18-2024 04:09:33
